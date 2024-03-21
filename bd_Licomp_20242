@@ -14,7 +14,7 @@ use exemplodb;
 drop database exemplodb;
 
 --Criar bancoDB
-create bancoDB;
+create database bancoDB;
 
 --criando a tabela bancos
 create table bancos(
