@@ -14,7 +14,7 @@ use exemplodb;
 drop database exemplodb;
 
 --Criar bancoDB
-create database bancoDB;
+create bancoDB;
 
 --criando a tabela bancos
 create table bancos(
@@ -54,14 +54,28 @@ alter table clientes
         add mes int(2);
 
 
+alter table clientes
+    add constraint dia_ck check (dia>=1 and dia<=31), 
+   add constraint mes_ck check (mes>=1 and mes<=12);
+    
+--aula 21/03
+create table produtos
+
+alter table produtos
+    add unidades varchar(10) default 'default';
+
+
+ 
+
+
 --***config do github***
 -- definindo usuario
 
-git config -- global user.name "EwertonPatrick"
+git config -- global user.name "Ewertonpk"
 git config -- global user.email "dcifrj22013.ewerton@proeja.com"
 git add .
 git commit -m "aula dia 14/03"
-git remote add origin https://github.com/EwertonPatrick/BD2_licomp_20241.git
+git remote add origin https://github.com/Ewertonpk/bd2_Licomp_20242.git
 
 git push -u master
 git push -u origin master
